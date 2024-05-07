@@ -21,15 +21,8 @@ public class HttpClientRunner {
                 .header("content-type", "application/json")
                 .POST(ofFile(Path.of("src/main/resources/example.json")))
                 .build();
-
-
         var response3 = httpClient.sendAsync(request, HttpResponse.BodyHandlers.ofString());
         String body = response3.get().body();
         System.out.println(body);
-
-
-
     }
-
-
 }

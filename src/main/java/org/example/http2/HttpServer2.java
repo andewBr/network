@@ -39,19 +39,16 @@ public class HttpServer2 {
         try (socket;
              var inputStream = new DataInputStream(socket.getInputStream());
              var outputStream = new DataOutputStream(socket.getOutputStream())) {
-//            Thread.sleep(1000);
             byte[] requestData = inputStream.readNBytes(600);
             System.out.println("===>>> this is string: " + new String(requestData));
 
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode jsonNode = objectMapper.readTree(requestData);
 
-            // Получаем значения из JSON
             int totalIncome = jsonNode.get("total_income").asInt();
             int totalTax = jsonNode.get("total_tax").asInt();
             int totalProfit = jsonNode.get("total_profit").asInt();
 
-            // Формируем HTML-страницу с данными
             String htmlResponse = """
                 <!DOCTYPE html>
                 <html lang="en">

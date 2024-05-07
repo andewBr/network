@@ -1,8 +1,8 @@
 {
-  "info": "salary.by",
+  "info": "info",
   "employees": [
     {
-      "id": "01",
+      "id": "1",
       "name": "Иванов И.И.",
       "salary": 500,
       "tax": 200
