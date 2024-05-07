@@ -1,0 +1,11 @@
+{
+  "info": "salary.by",
+  "employees": [
+    {
+      "id": "01",
+      "name": "Иванов И.И.",
+      "salary": 500,
+      "tax": 200
+    }
+  ]
+}
